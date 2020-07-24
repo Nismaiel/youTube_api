@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:youtube_project/utilities/keys.dart';
-import 'package:youtube_project/models/channelModel.dart';
-import 'package:youtube_project/models/videoModel.dart';
+import 'package:youTube_api/models/channelModel.dart';
+import 'package:youTube_api/models/videoModel.dart';
+import 'package:youTube_api/utilities/keys.dart';
+
 
 class APIService {
   APIService._instantiate();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_project/screens/video.dart';
-import 'package:youtube_project/services/apiServices.dart';
-import 'package:youtube_project/models/videoModel.dart';
-import 'package:youtube_project/models/channelModel.dart';
+import 'package:youTube_api/models/channelModel.dart';
+import 'package:youTube_api/models/videoModel.dart';
+import 'package:youTube_api/screens/video.dart';
+import 'package:youTube_api/services/apiServices.dart';
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();

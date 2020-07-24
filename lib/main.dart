@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_project/screens/home.dart';
+import 'package:youTube_api/screens/home.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://C:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-4.0.0+4" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>
