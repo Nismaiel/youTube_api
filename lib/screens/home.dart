@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
 
   _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(channelId: 'Your-channel-Id');
+        .fetchChannel(channelId: 'UCzZBSMrWvjksv3xEuBSfI3Q');
     setState(() {
       _channel = channel;
     });
