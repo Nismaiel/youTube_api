@@ -13,11 +13,9 @@ class VideoScreen extends StatefulWidget {
 
 class _VideoScreenState extends State<VideoScreen> {
   YoutubePlayerController _controller;
-final ams=AdMobService();
   @override
   void initState() {
     super.initState();
-    Admob.initialize(ams.getAdMobId());
     _controller = YoutubePlayerController(
       initialVideoId: widget.id,
       flags: YoutubePlayerFlags(
@@ -40,7 +38,6 @@ final ams=AdMobService();
               print('Player is ready.');
             },
           ),
-        AdmobBanner(adUnitId: ams.getBannerAddId(), adSize: AdmobBannerSize.FULL_BANNER)
         ],
       ),
     );

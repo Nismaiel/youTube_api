@@ -4,18 +4,18 @@ class AdMobService{
 
   String getAdMobId(){
     if(Platform.isIOS){
-      return 'IOS-App-ID';
+      return 'ca-app-pub-1913754781691997~8480424041';
     }else if(Platform.isAndroid){
-      return 'Android-App-Id';
+      return 'ca-app-pub-1913754781691997~4439013351';
     }
-return null;
+//return null;
   }
   String getBannerAddId(){
      if(Platform.isIOS){
-       return 'Ios-Banner-ID';
+       return 'ca-app-pub-1913754781691997/7093096856';
      }else if(Platform.isAndroid){
-       return 'android-Panner-Id';
+       return 'ca-app-pub-1913754781691997/7995114988';
      }
-     return null; 
+//     return null;
   }
 }

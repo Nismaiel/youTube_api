@@ -1,7 +1,9 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:youTube_api/models/channelModel.dart';
 import 'package:youTube_api/models/videoModel.dart';
 import 'package:youTube_api/screens/video.dart';
+import 'package:youTube_api/services/admobService.dart';
 import 'package:youTube_api/services/apiServices.dart';
 class Home extends StatefulWidget {
   @override
@@ -11,7 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   Channel _channel;
   bool isLoading = false;
-
+final ams=AdMobService();
   @override
   void initState() {
     super.initState();
@@ -153,15 +155,23 @@ class _HomeState extends State<Home> {
           }
           return false;
         },
-        child: ListView.builder(
-          itemCount: 1 + _channel.videos.length,
-          itemBuilder: (BuildContext context, int index) {
-            if (index == 0) {
-              return _buildProfileInfo();
-            }
-            Video video = _channel.videos[index - 1];
-            return _buildVideo(video);
-          },
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              AdmobBanner(adUnitId: ams.getBannerAddId(), adSize: AdmobBannerSize.FULL_BANNER),
+
+              ListView.builder(shrinkWrap: true,physics: NeverScrollableScrollPhysics(),
+                itemCount: 1 + _channel.videos.length,
+                itemBuilder: (BuildContext context, int index) {
+                  if (index == 0) {
+                    return _buildProfileInfo();
+                  }
+                  Video video = _channel.videos[index - 1];
+                  return _buildVideo(video);
+                },
+              ),
+            ],
+          ),
         ),
       )
           : Center(
