@@ -20,7 +20,8 @@ class _HomeState extends State<Home> {
 
   _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(channelId: 'UCzZBSMrWvjksv3xEuBSfI3Q');
+      //You can get your channel id from this website ==> https://commentpicker.com/youtube-channel-id.php
+        .fetchChannel(channelId: 'UCwXdFgeE9KYzlDdR7TG9cMw');
     setState(() {
       _channel = channel;
     });
